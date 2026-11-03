@@ -1,0 +1,56 @@
+{
+  "name": "@local/dsh-deepseek-peak-clock",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DeepSeek 峰谷时段时钟：常驻提示当前是峰价还是谷价，并倒数下一次切换。",
+  "license": "MIT",
+  "author": "Ricky74192",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis-plugin",
+    "deepseek",
+    "pricing",
+    "peak-hours",
+    "clock"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ricky74192/dsh-deepseek-peak-clock.git"
+  },
+  "homepage": "https://github.com/Ricky74192/dsh-deepseek-peak-clock#readme",
+  "bugs": {
+    "url": "https://github.com/Ricky74192/dsh-deepseek-peak-clock/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

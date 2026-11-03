@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DeepSeek Peak/Valley Clock",
+    "description": "Keeps a live badge under the composer showing peak or off-peak pricing, the countdown to the next switch, Beijing time, and today's peak windows."
+  }
+}
